@@ -1,0 +1,20 @@
+fieldset {
+	margin: 5px 0;
+}
+
+#dateYear {
+	width: 30%;
+}
+
+#dateDay {
+	width: 22%;
+}
+
+#dateMonth {
+	width: 43%;
+}
+
+#booking_submit {
+	margin-top: 25px;
+	margin-left: 40px;
+}
