@@ -53,52 +53,58 @@
         <li class="name">
           <h1>
             <a href="#">
-              Airline Booking Online
+              Airline Booking Online (Admin Pages)
             </a>
           </h1>
         </li>
         <li class="toggle-topbar"><a href="#"></a></li>
       </ul>
 
-      
+
       <section>
         <!-- Right Nav Section -->
         <ul class="right">
           <li class="divider show-for-medium-and-up"></li>
           <li>
-            <a href="../">หน้าแรก</a>
+            <a href="../admin/">หน้าแรก</a>
           </li>
           <li class="divider show-for-medium-and-up"></li>
           <li>
-            <a href="../booking">จองตั๋ว</a>
+            <a href="../admin/list_booking">ดูรายการจองตั๋ว</a>
           </li>
           <li class="divider show-for-medium-and-up"></li>
-          <li>
-            <a href="../admin">ผู้ดูแลระบบ</a>
-          </li>
-        </ul>
-      </section></nav>
-    </div>
-    <div id="content">
+          <li class="has-dropdown">
+            <a href="#">ผู้ดูแลระบบ [<?= $username ?>]</a>
+            <ul class="dropdown"><li class="title back js-generated"><h5><a href="#">Item 2</a></h5></li>
+              <li class="divider"></li>
+              <li><label>ข้อมูลส่วนตัว</label></li>
+              <li><a href="../admin/change_pass">เปลี่ยนรหัสผ่าน</a></li>
+              <li class="divider"></li>
+              <li><a href="../admin/logout">ออกจากระบบ</a></li>
+            </ul>
+          </ul>
+        </section></nav>
+      </div>
+      <div id="content">
 
-     <?php echo $this->Session->flash(); ?>
+       <?php echo $this->Session->flash(); ?>
 
-     <?php echo $this->fetch('content'); ?>
+       <?php echo $this->fetch('content'); ?>
+     </div>
+     <div id="footer">
+       <!-- Latest version of jQuery -->
+
+       <!-- Included JS Files (Unminified) -->
+       <!-- [JS Files] -->
+       <!-- We include all the unminified JS as well. Uncomment to use them instead -->
+
+       <!-- Included JS Files (Minified) -->
+       <script src="../foundation/javascripts/foundation.min.js"></script>
+
+       <!-- Initialize JS Plugins -->
+       <script src="../foundation/javascripts/app.js"></script>
+     </div>
    </div>
-   <div id="footer">
-     <!-- Latest version of jQuery -->
-
-     <!-- Included JS Files (Unminified) -->
-     <!-- [JS Files] -->
-     <!-- We include all the unminified JS as well. Uncomment to use them instead -->
-
-     <!-- Included JS Files (Minified) -->
-     <script src="../foundation/javascripts/foundation.min.js"></script>
-
-     <!-- Initialize JS Plugins -->
-     <script src="../foundation/javascripts/app.js"></script>
-   </div>
- </div>
- <?php echo $this->element('sql_dump'); ?>
-</body>
-</html>
+   <?php echo $this->element('sql_dump'); ?>
+ </body>
+ </html>
