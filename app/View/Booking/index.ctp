@@ -7,7 +7,7 @@
 <?= $this->Form->create(); ?>
 <div class="row">
 	<div class="three columns">
-	<?= $this->Form->input('airline.isgoback',array('type' => 'radio', 'legend' => 'ประเภทการเดินทาง', 'options' => array( 0 => 'ไป-กลับ', 1 => 'เที่ยวเดียว'),'default' => 0,'div' => false)); ?>
+	<?= $this->Form->input('Flight.type',array('type' => 'radio', 'legend' => 'ประเภทการเดินทาง', 'options' => array( 'Return' => 'ไป-กลับ', 'Not' => 'เที่ยวเดียว'),'default' => 0,'div' => false)); ?>
 	</div>
 	<div class="six columns pull-three">
 		<fieldset>
