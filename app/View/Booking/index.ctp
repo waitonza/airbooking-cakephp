@@ -7,21 +7,21 @@
 <?= $this->Form->create(); ?>
 <div class="row">
 	<div class="three columns">
-	<?= $this->Form->input('Flight.type',array('type' => 'radio', 'legend' => 'ประเภทการเดินทาง', 'options' => array( 'Return' => 'ไป-กลับ', 'Not' => 'เที่ยวเดียว'),'default' => 0,'div' => false)); ?>
+	<?= $this->Form->input('Flight.type',array('type' => 'radio', 'legend' => 'ประเภทการเดินทาง', 'options' => array( 'Return' => 'ไป-กลับ', 'Not' => 'เที่ยวเดียว'),'default' => 'Return','div' => false)); ?>
 	</div>
 	<div class="six columns pull-three">
 		<fieldset>
 			<legend>ข้อมูลการเดินทาง</legend>
 			<div class="five columns">
-			<?= $this->Form->input('City.Form_id', array('class' => false, 'options' => $cities, 'div' => false, 'label' => 'เดินทางจาก :', 'empty' => '(โปรดเลือก)'));?>
-			<?= $this->Form->input('City.to_id', array('class' => false, 'options' => $cities, 'div' => false, 'label' => 'ถึง :', 'empty' => '(โปรดเลือก)'));?>
+			<?= $this->Form->input('Flight.form_city_id', array('class' => false, 'options' => $cities, 'div' => false, 'label' => 'เดินทางจาก :', 'empty' => '(โปรดเลือก)'));?>
+			<?= $this->Form->input('Flight.to_city_id', array('class' => false, 'options' => $cities, 'div' => false, 'label' => 'ถึง :', 'empty' => '(โปรดเลือก)'));?>
 			</div>
 			<div class="seven columns">
-			<?= $this->Form->input('City.to_id', array('class' => false, 'type' => 'date', 'dateFormat' => 'DMY' , 'div' => false, 'label' => 'วันออกเดินทาง', 'id' => 'date',
+			<?= $this->Form->input('Flight.depaerture_date', array('class' => false, 'type' => 'date', 'dateFormat' => 'DMY' , 'div' => false, 'label' => 'วันออกเดินทาง', 'id' => 'date',
     		'minYear' => date('Y'),
     		'maxYear' => date('Y') + 1));?>
     			<div id="dateback">
-    				<?= $this->Form->input('City.to_id', array('class' => false, 'type' => 'date', 'dateFormat' => 'DMY' , 'div' => false, 'label' => 'วันเดินทางกลับ', 'id' => 'date',
+    				<?= $this->Form->input('Flight.arrival_date', array('class' => false, 'type' => 'date', 'dateFormat' => 'DMY' , 'div' => false, 'label' => 'วันเดินทางกลับ', 'id' => 'date',
     					'minYear' => date('Y'),
     					'maxYear' => date('Y') + 1));?>
     			</div>
@@ -34,7 +34,7 @@
 		<fieldset>
 			<legend>จำนวนตั๋ว</legend>
 			<div class="four columns">
-			<?= $this->Form->input('City.to_id', array('class' => 'ticketnum', 'type' => 'select', 
+			<?= $this->Form->input('Booking.adult_count', array('class' => 'ticketnum', 'type' => 'select', 
 			'options' => array(
 				1 => 1,
 				2 => 2,
@@ -49,7 +49,7 @@
 			,'div' => false, 'label' => 'ผู้ใหญ่', 'default' => 1)); ?>
 			</div>
 			<div class="four columns">
-		<?= $this->Form->input('City.to_id', array('class' => 'ticketnum', 'type' => 'select', 
+		<?= $this->Form->input('Booking.kids_count', array('class' => 'ticketnum', 'type' => 'select', 
 			'options' => array(
 				0 => 0,
 				1 => 1,
@@ -64,7 +64,7 @@
 			,'div' => false, 'label' => 'เด็ก (2-11 ปี)','default' => 0)); ?>
 			</div>
 			<div class="four columns">
-				<?= $this->Form->input('City.to_id', array('class' => 'ticketnum', 'type' => 'select', 
+				<?= $this->Form->input('Booking.baby_count', array('class' => 'ticketnum', 'type' => 'select', 
 			'options' => array(
 				0 => 0,
 				1 => 1,
@@ -85,14 +85,14 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-			$("#CityBool0").change(function(){
-				if($('#CityBool0').attr('checked') == "checked") {
+			$("#FlightTypeReturn").change(function(){
+				if($('#FlightTypeReturn').attr('checked') == "checked") {
 					$("#dateback").show();
 				}
 			});
 			
-			$("#CityBool1").change(function(){
-				if($('#CityBool1').attr('checked') == "checked") {
+			$("#FlightTypeNot").change(function(){
+				if($('#FlightTypeNot').attr('checked') == "checked") {
 					$("#dateback").hide();
 				}
 			});
