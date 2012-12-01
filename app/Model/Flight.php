@@ -130,20 +130,4 @@ class Flight extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array(
-		'FormCity' => array(
-			'className' => 'FormCity',
-			'foreignKey' => 'form_city_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'ToCity' => array(
-			'className' => 'ToCity',
-			'foreignKey' => 'to_city_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
 }
