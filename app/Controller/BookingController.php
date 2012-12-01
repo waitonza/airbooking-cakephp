@@ -39,7 +39,7 @@ class BookingController extends AppController
 		if ($this->request->is('get')) {
 			$data = $this->Session->read('Booking.Step1');
 			debug($data);
-			$result = $this->Flight->findAllByTypeAndFormcityIdAndTocityId($data['Flight']['type'], $data['Flight']['form_city_id'], $data['Flight']['to_city_id']);
+			$result = $this->Flight->findAllByTypeAndFromcityIdAndTocityId($data['Flight']['type'], $data['Flight']['form_city_id'], $data['Flight']['to_city_id']);
 			debug($result);
 		}
 		else if ($this->request->is('post')){
