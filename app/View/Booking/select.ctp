@@ -72,26 +72,26 @@
 
         <td style="background-color:#EAD4E4" onchange="" onclick="">
           <?php 
-              $value = $result['Flight']['id'].'_'.'b'.'_'.$result['Flight']['price_baby'];
+              $value = $result['Flight']['id'].'_'.'e';
           ?>
-          <?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?>
-          <span>฿<?= $result['Flight']['price_baby']; ?>.00</span>
+          <center><?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?></center>
+          <span>฿<?= $result['Flight']['price_baby'] - 500; ?> (Baby) <br> ฿<?= $result['Flight']['price_kids'] - 500; ?> (Kids) <br> ฿<?= $result['Flight']['price_adult'] - 500; ?> (Adult)</span>
         </td>
 
         <td style="background-color:#E1A6CF" onchange="" onclick="">
           <?php 
-              $value = $result['Flight']['id'].'_'.'k'.'_'.$result['Flight']['price_kids'];
+              $value = $result['Flight']['id'].'_'.'b';
           ?>
-          <?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?>
-          <span>฿<?= $result['Flight']['price_kids']; ?>.00</span>
+          <center><?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?></center>
+          <span>฿<?= $result['Flight']['price_baby']; ?> (Baby) <br> ฿<?= $result['Flight']['price_kids']; ?> (Kids) <br> ฿<?= $result['Flight']['price_adult']; ?> (Adult)</span>
         </td>
 
         <td style="background-color:#DA89BE" onchange="" onclick="">
           <?php 
-              $value = $result['Flight']['id'].'_'.'a'.'_'.$result['Flight']['price_adult'];
+              $value = $result['Flight']['id'].'_'.'a';
           ?>
-          <?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?>
-          <span>฿<?= $result['Flight']['price_adult']; ?>.00</span>
+          <center><?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?></center>
+          <span>฿<?= $result['Flight']['price_baby'] + 1000; ?> (Baby) <br> ฿<?= $result['Flight']['price_kids'] + 1000; ?> (Kids) <br> ฿<?= $result['Flight']['price_adult']; + 1000 ?> (Adult)</span>
         </td>
 
       </tr>
