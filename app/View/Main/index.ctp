@@ -10,7 +10,7 @@
       <div class="row">
         <div class="support attribute">
           <div class="eight columns centered">
-            <a class="radius button twelve columns" href="#">Booking</a>
+            <a class="radius button twelve columns" href="../booking">Booking</a>
           </div>
         </div>
       </div>
