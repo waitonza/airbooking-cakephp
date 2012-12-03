@@ -27,10 +27,10 @@
   <title>Page Title</title>
 
   <!-- Included CSS Files, use foundation.css if you do not want minified code -->
-  <link rel="stylesheet" href="../foundation/stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="../foundation/stylesheets/app.css">
-  <link rel="stylesheet" href="../css/booking.css" />
-  <script src="../foundation/javascripts/jquery.js"></script>
+  <link rel="stylesheet" href="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/foundation/stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/foundation/stylesheets/app.css">
+  <link rel="stylesheet" href="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/css/booking.css" />
+  <script src="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/foundation/javascripts/jquery.js"></script>
 
   <?php
 
@@ -98,10 +98,10 @@
      <!-- We include all the unminified JS as well. Uncomment to use them instead -->
 
      <!-- Included JS Files (Minified) -->
-     <script src="../foundation/javascripts/foundation.min.js"></script>
+     <script src="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/foundation/javascripts/foundation.min.js"></script>
 
      <!-- Initialize JS Plugins -->
-     <script src="../foundation/javascripts/app.js"></script>
+     <script src="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/foundation/javascripts/app.js"></script>
    </div>
  </div>
 </body>

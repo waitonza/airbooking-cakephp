@@ -1,5 +1,7 @@
 <h2>ตรวจสอบข้อมูลเที่ยวบิน และการจ่ายเงิน</h2>
 <div class="container">
+
+<?php if ($flight_sel['Flight']['type'] == 'Return' || $flight_sel['Flight']['type'] == 'Not'): ?>
   <table cellspacing="0" cellpadding="0">
     <tbody><tr>
       <th colspan="3">
@@ -88,6 +90,10 @@
 
 
 </tbody></table>
+<? endif; ?>
+
+<?php if ($flight_sel['Flight']['type'] == 'Return'): ?>
+
 <table cellspacing="0" cellpadding="0" style="border-top:none">
   <tbody><tr>
     <th colspan="3">
@@ -162,6 +168,7 @@
 </tbody></table>
 </div>
 </tbody></table>
+<? endif; ?>
 
 <h3>ราคา</h3>
 <div>

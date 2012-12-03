@@ -18,3 +18,59 @@ fieldset {
 	margin-top: 25px;
 	margin-left: 40px;
 }
+
+#deptimeHour {
+	width: 5%;
+}
+
+#deptimeMinute {
+	width: 5%;
+	margin-left: 5px;
+}
+#depdateMonth {
+	width: 10%;
+}
+#depdateDay {
+	width: 5%;
+	margin-left: 5px;
+}
+#depdateYear {
+	width: 5%;
+	margin-left: 5px;	
+}
+#arrtimeHour {
+	width: 5%;
+}
+#arrtimeMinute {
+	width: 5%;
+	margin-left: 5px;
+}
+#arrdateMonth {
+	width: 10%;
+}
+#arrdateDay {
+	width: 5%;
+	margin-left: 5px;
+}
+#arrdateYear {
+	width: 5%;
+	margin-left: 5px;
+}
+#fromid {
+	width: 15%
+}
+#toid {
+	width: 15%;
+}
+#returnid {
+	width: 10%;
+}
+#adultid {
+	width: 10%;
+}
+#kidsid {
+	width: 10%;
+}
+#babyid {
+	width: 10%;
+}

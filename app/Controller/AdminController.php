@@ -23,14 +23,22 @@ class AdminController extends AppController
 	{
 		if ($this->request->is('post'))
 		{
-			if ($this->Auth->login($this->request->data))
-			{
-				$this->redirect(array('action' => 'index'));
+			$data = $this->request->data;
+			$pass = $this->AdminUser->findByUsernameAndPassword($data['AdminUser']['username'], AuthComponent::password($data['AdminUser']['password']));
+			if ($pass) {
+				if ($this->Auth->login($this->request->data))
+				{
+					$this->redirect(array('action' => 'index'));
+				}
+				else
+				{
+					$this->Session->setFlash('คุณใส่ Username หรือ password ผิด, โปรดลองอีกครั้ง');
+				}
 			}
-			else
-			{
+			else {
 				$this->Session->setFlash('คุณใส่ Username หรือ password ผิด, โปรดลองอีกครั้ง');
-			}
+			}		
+				
 		}
 	}
 
@@ -151,6 +159,7 @@ class AdminController extends AppController
 				'INSERT INTO `flight` (`departure_time`, `departure_date`, `arrival_time`, `arrival_date`, `form_city_id`, `to_city_id`, `type`, `price_adult`, `price_kids`, `price_baby`) 
 				VALUES ("'.$departure_time.'", "'.$departure_date.'", "'.$arrival_time.'", "'.$arrival_date.'", '.$data['Flight']['form_city_id'].', '.$data['Flight']['to_city_id'].', "'.$data['Flight']['type'].'", '.
 					$data['Flight']['price_adult'].', '.$data['Flight']['price_kids'].', '.$data['Flight']['price_baby'].')');
+			$this->redirect(array('action' => 'flight_manager'));
 		}
 	}
 

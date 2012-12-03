@@ -52,8 +52,10 @@
 		</tr>
 	</table>
 
-	<h2>ข้อมูลการเดินทาง</h2>
+	<h3>ข้อมูลการเดินทาง</h3>
 	<table cellspacing="0" cellpadding="0">
+
+		<?php if ($flight_sel['Flight']['type'] == 'Return' || $flight_sel['Flight']['type'] == 'Not'): ?>
 		<tr>
 			<td>
 				<?= $form_city['City']['name']; ?> ถึง <?= $to_city['City']['name']; ?>
@@ -65,7 +67,9 @@
 				<?php $time = new DateTime($flight_sel['Flight']['departure_time']); echo $time->format('H:i'); ?> - <?php $time = new DateTime($flight_sel['Flight']['arrival_time']); echo $time->format('H:i'); ?>
 			</td>
 		</tr>
+		<? endif; ?>
 
+		<?php if ($flight_sel['Flight']['type'] == 'Return'): ?>
 		<tr>
 			<td>
 				<?= $to_city['City']['name']; ?> ถึง <?= $form_city['City']['name']; ?>
@@ -77,6 +81,7 @@
 				<?php $time = new DateTime($flight_sel['Flight']['departure_time']); echo $time->format('H:i'); ?> - <?php $time = new DateTime($flight_sel['Flight']['arrival_time']); echo $time->format('H:i'); ?>
 			</td>
 		</tr>
+		<? endif; ?>
 	</table>
 
 	<h3>ราคา</h3>
@@ -199,7 +204,7 @@
 		</span>
 	</table>
 
-	<h2>การจ่ายเงิน</h2>
+	<h3>การจ่ายเงิน</h3>
 	<table cellspacing="0" cellpadding="0">
 		<tr>
 			<td>จ่ายเงินผ่านช่องทาง : </td>

@@ -27,10 +27,10 @@
   <title>Page Title</title>
 
   <!-- Included CSS Files, use foundation.css if you do not want minified code -->
-  <link rel="stylesheet" href="../foundation/stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="../foundation/stylesheets/app.css">
-  <link rel="stylesheet" href="../css/booking.css" />
-  <script src="../foundation/javascripts/jquery.js"></script>
+  <link rel="stylesheet" href="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/foundation/stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/foundation/stylesheets/app.css">
+  <link rel="stylesheet" href="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/css/booking.css" />
+  <script src="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/foundation/javascripts/jquery.js"></script>
 
   <?php
 
@@ -66,11 +66,11 @@
         <ul class="right">
           <li class="divider show-for-medium-and-up"></li>
           <li>
-            <a href="../admin/">ดูรายการจองตั๋ว</a>
+            <a href="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/admin/">ดูรายการจองตั๋ว</a>
           </li>
           <li class="divider show-for-medium-and-up"></li>
           <li>
-            <a href="../admin/flight_manager">จัดการรายการ การบิน</a>
+            <a href="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/admin/flight_manager">จัดการรายการ การบิน</a>
           </li>
           <li class="divider show-for-medium-and-up"></li>
           <li class="has-dropdown">
@@ -78,9 +78,9 @@
             <ul class="dropdown"><li class="title back js-generated"><h5><a href="#">Item 2</a></h5></li>
               <li class="divider"></li>
               <li><label>ข้อมูลส่วนตัว</label></li>
-              <li><a href="../admin/change_pass">เปลี่ยนรหัสผ่าน</a></li>
+              <li><a href="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/admin/change_pass">เปลี่ยนรหัสผ่าน</a></li>
               <li class="divider"></li>
-              <li><a href="../admin/logout">ออกจากระบบ</a></li>
+              <li><a href="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/admin/logout">ออกจากระบบ</a></li>
             </ul>
           </ul>
         </section></nav>
@@ -104,10 +104,10 @@
        <!-- We include all the unminified JS as well. Uncomment to use them instead -->
 
        <!-- Included JS Files (Minified) -->
-       <script src="../foundation/javascripts/foundation.min.js"></script>
+       <script src="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/foundation/javascripts/foundation.min.js"></script>
 
        <!-- Initialize JS Plugins -->
-       <script src="../foundation/javascripts/app.js"></script>
+       <script src="<?= "http://".$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"] ?>/foundation/javascripts/app.js"></script>
      </div>
    </div>
  </body>

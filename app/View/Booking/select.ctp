@@ -91,7 +91,7 @@
             $value = $result['Flight']['id'].'_'.'f';
             ?>
             <center><?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?></center>
-            <span>฿<?= $result['Flight']['price_baby'] + 1000; ?> (Baby) <br> ฿<?= $result['Flight']['price_kids'] + 1000; ?> (Kids) <br> ฿<?= $result['Flight']['price_adult']; + 1000 ?> (Adult)</span>
+            <span>฿<?= $result['Flight']['price_baby'] + 1000; ?> (Baby) <br> ฿<?= $result['Flight']['price_kids'] + 1000; ?> (Kids) <br> ฿<?= $result['Flight']['price_adult'] + 1000; ?> (Adult)</span>
           </td>
 
         </tr>
@@ -187,7 +187,7 @@
             $value = $result['Flight']['id'].'_'.'f';
             ?>
             <center><?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?></center>
-            <span>฿<?= $result['Flight']['price_baby'] + 1000; ?> (Baby) <br> ฿<?= $result['Flight']['price_kids'] + 1000; ?> (Kids) <br> ฿<?= $result['Flight']['price_adult']; + 1000 ?> (Adult)</span>
+            <span>฿<?= $result['Flight']['price_baby'] + 1000; ?> (Baby) <br> ฿<?= $result['Flight']['price_kids'] + 1000; ?> (Kids) <br> ฿<?= $result['Flight']['price_adult'] + 1000; ?> (Adult)</span>
           </td>
         </tr>
       <?php endforeach; ?>
