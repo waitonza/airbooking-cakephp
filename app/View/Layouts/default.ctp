@@ -99,6 +99,5 @@
      <script src="../foundation/javascripts/app.js"></script>
    </div>
  </div>
- <?php echo $this->element('sql_dump'); ?>
 </body>
 </html>

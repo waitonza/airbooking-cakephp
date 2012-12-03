@@ -66,11 +66,11 @@
         <ul class="right">
           <li class="divider show-for-medium-and-up"></li>
           <li>
-            <a href="../admin/">หน้าแรก</a>
+            <a href="../admin/">ดูรายการจองตั๋ว</a>
           </li>
           <li class="divider show-for-medium-and-up"></li>
           <li>
-            <a href="../admin/list_booking">ดูรายการจองตั๋ว</a>
+            <a href="../admin/flight_manager">จัดการรายการ การบิน</a>
           </li>
           <li class="divider show-for-medium-and-up"></li>
           <li class="has-dropdown">

@@ -88,7 +88,7 @@
 
         <td style="background-color:#DA89BE" onchange="" onclick="">
           <?php 
-              $value = $result['Flight']['id'].'_'.'a';
+              $value = $result['Flight']['id'].'_'.'f';
           ?>
           <center><?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?></center>
           <span>฿<?= $result['Flight']['price_baby'] + 1000; ?> (Baby) <br> ฿<?= $result['Flight']['price_kids'] + 1000; ?> (Kids) <br> ฿<?= $result['Flight']['price_adult']; + 1000 ?> (Adult)</span>
@@ -168,7 +168,7 @@
 
           <td style="background-color:#EAD4E4">
             <?php 
-              $value = $result['Flight']['id'].'_'.'b'.'_'.$result['Flight']['price_baby'];
+              $value = $result['Flight']['id'].'_'.'b';
             ?>
             <?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?>
             <span>฿<?= $result['Flight']['price_baby']; ?>.00</span>
@@ -176,7 +176,7 @@
 
           <td style="background-color:#E1A6CF">
             <?php 
-              $value = $result['Flight']['id'].'_'.'k'.'_'.$result['Flight']['price_kids'];
+              $value = $result['Flight']['id'].'_'.'k';
             ?>
             <?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?>
             <span>฿<?= $result['Flight']['price_kids']; ?>.00</span>
@@ -184,7 +184,7 @@
 
           <td style="background-color:#DA89BE">
             <?php 
-              $value = $result['Flight']['id'].'_'.'a'.'_'.$result['Flight']['price_adult'];
+              $value = $result['Flight']['id'].'_'.'f';
             ?>
             <?= $this->Form->input('Flight.selected',array('type' => 'radio', 'label' => false, 'options' => array($value => ''),'default' => false,'div' => false)); ?>
             <span>฿<?= $result['Flight']['price_adult']; ?>.00</span>
