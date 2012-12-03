@@ -9,4 +9,3 @@ echo $this->Form->inputs(array(
 echo $this->Form->submit('ลงทะเบียน');
 echo $this->Form->end();
 echo $this->Form->button('ยกเลิก', array('onclick' => "location.href='".$this->Html->url(array('action' => 'login'))."'" )); ?>
-?>

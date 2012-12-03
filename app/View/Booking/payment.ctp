@@ -70,7 +70,7 @@
             $class = 'Ecomony / ราคาประหยัด';
           } else if ($class_sel == 'b') {
             $class = 'Bussiness / ราคาปกติ';
-          } else if ($class_sel == 'a') {
+          } else if ($class_sel == 'f') {
             $class = 'First Class / ชั้นพิเศษ';
           } 
           ?>
@@ -298,11 +298,15 @@
 <h3>การจ่ายเงิน</h3>
 <?= $this->Form->input('Payment.total_payment', array('type' => 'hidden', 'value' => $result)); ?>
 <?= $this->Form->input('Payment.method', array('type' => 'radio', 'options' => array('C' => 'บัตรเครดิด', 'P' => 'Paypal', 'A' => 'ช่องจ่ายตั๋วสนามบิน'), 'legend' => 'วิธีการจ่ายเงิน', 'default' => 'C')); ?>
-
 <!-- Credit Card -->
 <div id="field_credit">
-  <?= $this->Form->input('Payment.credit_no', array('label' => 'Credit Card Number')); ?>
-  <?= $this->Form->input('Payment.ccv', array('label' => 'CCV')); ?>
+  <div class = "row">
+  <?= $this->Form->input('Payment.credit_no', array('label' => 'Credit Card Number','class' => 'four columns') ); ?>
+  </div>
+  <div class = "row">
+    <?= $this->Form->input('Payment.ccv', array('label' => 'CCV', 'class' => 'two columns')); ?>
+  </div>
+   <div class = "row"> 
   <?= $this->Form->input('Payment.exp_date', array(
     'type' => 'date' ,
     'label' => 'Expire Date', 
@@ -310,10 +314,11 @@
     'minYear' => date('Y'),
     'maxYear' => date('Y') + 15)); ?>
   </div>
+  </div>
 
   <!-- Paypal -->
-  <div id="field_paypal">
-    <?= $this->Form->input('Payment.paypal_email', array('label' => 'Paypal E-mail Address')); ?>
+  <div id="field_paypal" class = "row">
+    <?= $this->Form->input('Payment.paypal_email', array('label' => 'Paypal E-mail Address','class' => 'two columns')); ?>
   </div>
 
   <!-- Airport -->
@@ -323,9 +328,14 @@
     </p>
   </div>
 
-  <?= $this->Form->submit('ตกลง', array('class' => 'button', 'id' => 'booking_submit')); ?>
-  <?= $this->Form->end(); ?>
-  <?= $this->Form->button('ยกเลิก', array('onclick' => "location.href='".$this->Html->url(array('action' => 'reset'))."'",'class' => 'button' )); ?>
+  <input class="button" id="booking_submit" type="submit" value="คกลง" style="
+    margin-left: 850px;
+">
+<?= $this->Form->end(); ?>
+<button onclick="location.href='/booking/reset'" class="button" type="submit" style="
+    margin-top: -56px;
+    margin-left: 750px;
+">ยกเลิก</button>
 
   <script type="text/javascript">
   $(document).ready(function(){

@@ -251,6 +251,11 @@
 	</table>
 
 	<?= $this->Form->create(); ?>
-	<?= $this->Form->submit('ยืนยัน', array('class' => 'button', 'id' => 'booking_submit')); ?>
-    <?= $this->Form->end(); ?>
-    <?= $this->Form->button('ยกเลิก', array('onclick' => "location.href='".$this->Html->url(array('action' => 'reset'))."'",'class' => 'button' )); ?>
+	<input class="button" id="booking_submit" type="submit" value="ยืนยัน" style="
+    margin-left: 850px;
+">
+<?= $this->Form->end(); ?>
+<button onclick="location.href='/booking/reset'" class="button" type="submit" style="
+    margin-top: -56px;
+    margin-left: 750px;
+">ยกเลิก</button>

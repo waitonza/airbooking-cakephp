@@ -221,7 +221,6 @@ class BookingController extends AppController
 			$booking_data['Booking']['credit_no'] = $data4['Payment']['credit_no'];
 			$booking_data['Booking']['paypal_email'] = $data4['Payment']['paypal_email'];
 			$booking_data['Booking']['total_price'] = $data4['Payment']['total_payment'];
-			debug($booking_data);
 			$this->Booking->query(
 				'INSERT INTO `booking` (`passenger_id`, `flight_id`, `adult_count`, `kids_count`, `baby_count`, `seat_type`, `payment_method`, `credit_no`, `paypal_email`, `total_price`) 
 				VALUES ('.$booking_data['Booking']['passenger_id'].','.$booking_data['Booking']['flight_id'].','.$booking_data['Booking']['adult_count'].','.$booking_data['Booking']['kids_count'].','.
