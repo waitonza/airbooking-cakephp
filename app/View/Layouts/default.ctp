@@ -85,6 +85,11 @@
 
      <?php echo $this->fetch('content'); ?>
    </div>
+   <div style="background:black;color:white;padding: 11px 0;margin-top: 30px;">
+      <div style="margin-left:1em">
+        Copyright
+      </div>
+    </div>
    <div id="footer">
      <!-- Latest version of jQuery -->
 
