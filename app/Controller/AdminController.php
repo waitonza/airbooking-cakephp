@@ -97,7 +97,38 @@ class AdminController extends AppController
 	{
 		$this->paginate = array(
 			'limit' => 15
-			);
+		);
+
+		if ($this->request->is('post')) {
+			$variable = $this->request->data;
+			$this->layout = 'default-admin';
+			if ($variable['Regstuinfo']['regis_type'] != '' && $variable['Regstuinfo']['regisId'] != '') {
+				$regstuinfos = $this->paginate('Regstuinfo', array(
+					'Regstuinfo.regis_type' => $variable['Regstuinfo']['regis_type'],
+					'AND' => array('Regstuinfo.regisId' => $variable['Regstuinfo']['regisId'])
+				));
+				$this->set(compact('regstuinfos'));
+			} else if ($variable['Regstuinfo']['regis_type'] != '') {
+				$regstuinfos = $this->paginate('Regstuinfo', array(
+					'Regstuinfo.regis_type LIKE' => '%' . $variable['Regstuinfo']['regis_type'] . '%'
+				));
+				$this->set(compact('regstuinfos'));
+			} else if ($variable['Regstuinfo']['regisId'] != '') {
+				$regstuinfos = $this->paginate('Regstuinfo', array(
+					'Regstuinfo.regisId LIKE' => '%' . $variable['Regstuinfo']['regisId'] . '%'
+				));
+				$this->set(compact('regstuinfos'));
+			} else {
+				$regstuinfos = $this->paginate('Regstuinfo');
+				$this->set(compact('regstuinfos'));
+			}
+		} else {
+			$this->layout = 'default-admin';
+	    	$regstuinfos = $this->paginate('Regstuinfo');
+			$this->set(compact('regstuinfos'));
+		}
+
+		
 		$bookings = $this->paginate('Booking');
 		for ($i = 0; $i < count($bookings); $i++) {
 			$form_city1 = $this->City->query(

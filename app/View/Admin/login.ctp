@@ -1,3 +1,4 @@
+<h3>ผู้ดูแลระบบ</h3>
 <?= $this->Form->create(); ?>
 <div class = "row">
 <?= $this->Form->input('AdminUser.username', array('div' => false, 'placeholder' => 'บัญชีผู้ใช้','class' => 'four columns')); ?>
